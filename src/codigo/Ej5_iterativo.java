@@ -3,6 +3,9 @@ package codigo;
 import static teclado.Teclado.readString;
 
 public class Ej5_iterativo {
+
+	//Pedir por teclado una cadena. Contar los espacios de la cadena. Si tiene espacios, sustituirlos por caracter vacio.
+	//Tanto si tiene espacios como si no, pasar a minusculas. Si la cadena se lee igual de izquierda a derecha como de derecha a izquierda, es palindroma.
 	
 	public static void main(String[] args) {
 		

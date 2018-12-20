@@ -2,6 +2,9 @@ package codigo;
 
 import static teclado.Teclado.*;
 
+//Pedir una cadena por teclado. Si la cadena solo tiene un caracter, devolver la cadena.
+//En caso contrario, invertirla.
+
 public class Ej4 {
 
 	public static void main(String[] args) {

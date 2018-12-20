@@ -1,5 +1,8 @@
 package codigo;
 
+//Pedir por teclado dos números. Si el segundo número es 0, el MCD de los dos es el primer número. 
+//En caso contrario, será: primero = segundo, segundo = primero%segundo.
+
 import static teclado.Teclado.*;
 
 public class Ej2 {

@@ -5,10 +5,11 @@ import static teclado.Teclado.*;
 import static codigo.Ej3.fibonacci;
 
 public class Ej3b {
+	
+	//Pedir un número por teclado. Encontrar el primer elemento de fibonacci que sea mayor o igual a dicho número junto a su indice, 
+	//utilizando la funcion del ejercicio anterior.
 
 	public static void main(String[] args) {
-		
-		int res = 0;
 		
 		System.out.println("Escribe un número:");
 		

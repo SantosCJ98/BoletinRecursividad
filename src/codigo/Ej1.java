@@ -3,6 +3,9 @@ package codigo;
 import static teclado.Teclado.*;
 
 public class Ej1 {
+	
+	//Pedir la base y el exponente (mayor o igual que cero) por teclado. Si el exponente es 0, se devuelve 1. Si es 1, se devuelve la base.
+	//En caso contrario, ir multiplicando la base tantas veces como indique el exponente.
 
 	public static void main(String[] args) {
 	

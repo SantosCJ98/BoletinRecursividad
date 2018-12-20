@@ -5,6 +5,9 @@ import static teclado.Teclado.*;
 import static codigo.Ej4.invertircadena;
 
 public class Ej5_recursiva {
+	
+	//Pedir por teclado una cadena. Si tiene espacios, sustituirlos por caracter vacio.
+	//Tanto si tiene espacios como si no, pasar a minusculas. Si la cadena es igual a su inversa, es palindroma.
 
 	public static void main(String[] args) {
 		

@@ -4,6 +4,9 @@ import static teclado.Teclado.*;
 
 import static codigo.Ej3.fibonacci;
 
+//Pedir el número de la serie de fibonacci al cual queremos llegar. Mostrar secuencia de fibonacci hasta el límite (establecida por la función
+//del ejercicio anterior)
+
 public class Ej3a {
 
 	public static void main(String[] args) {

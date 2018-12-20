@@ -3,6 +3,9 @@ package codigo;
 import static teclado.Teclado.*;
 
 public class Ej6 {
+	
+	//Rellenar un array de numeros por teclado. Si el array tiene de longitud 1, es capicua. Si el indice del principio es mayor o igual al del final, es capicua. 
+	//Si miarray[principio] != miarray[final], no es capicua.
 
 	public static void main(String[] args) {
 		
@@ -60,7 +63,7 @@ public static void mostrararray (int [] miarray) {
 	
 	public static boolean capicua (int [] miarray, int principio, int ultimo) {
 		
-		if ((miarray.length == 0) || (miarray.length == 1)) {
+		if (miarray.length == 1) {
 			
 			return true;
 			
