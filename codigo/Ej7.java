@@ -10,21 +10,35 @@ public class Ej7 {
 
 	public static void main(String[] args) {
 
+		// Introducir la longitud (debe ser mayor que 0)
+
 		System.out.println("Introduce la longitud del array");
 
 		int n = readEqui(0, Equivalencias.MAYOR);
+
+		// Introducir el número decimal a buscar.
 
 		System.out.println("¿Qué numero vas a buscar?");
 
 		double buscar = readDouble();
 
+		// Declarar array.
+
 		double[] miarray = new double[n];
+
+		// Relleanr array.
 
 		rellenararray(miarray);
 
+		// Ordenar array de menor a mayor.
+
 		double[] ordenado = burbuja(miarray);
 
+		// Mostrar el array ordenado.
+
 		mostrararray(ordenado);
+
+		// Comprobar si el numero a buscar aparece en el array.
 
 		if (encontrarposicion(ordenado, 1, ordenado.length, buscar)) {
 
@@ -41,6 +55,8 @@ public class Ej7 {
 
 	}
 
+	// Función para rellenar el array
+
 	public static double[] rellenararray(double[] miarray) {
 
 		for (int i = 0; i < miarray.length; i++) {
@@ -55,6 +71,8 @@ public class Ej7 {
 
 	}
 
+	// Funcion para mostrar el array
+
 	public static void mostrararray(double[] miarray) {
 
 		for (int i = 0; i < miarray.length; i++) {
@@ -67,11 +85,16 @@ public class Ej7 {
 
 	}
 
+	// Funcion de ordenamiento burbuja (ordenar valores del array de menor a mayor)
+
 	public static double[] burbuja(double[] miarray) {
 
 		for (int i = 0; i < miarray.length - 1; i++) {
 
 			for (int j = i + 1; j < miarray.length; j++) {
+
+				// Si el valor de la izquierda es mayor que el de la derecha, se cambian de
+				// lugar.
 
 				if (miarray[j] < miarray[i]) {
 
@@ -91,6 +114,8 @@ public class Ej7 {
 
 	}
 
+	// Funcion recursiva para determinar si aparece el número.
+
 	public static boolean encontrarposicion(double[] miarray, int inicio, int ultimo, double buscar) {
 
 		int aumento = inicio;
@@ -101,7 +126,8 @@ public class Ej7 {
 
 		int longitud = (ultimo - inicio);
 
-		if (miarray[indicemitad] == buscar && longitud == 0) {
+		if (miarray[indicemitad] == buscar && longitud == 0) { // Si el valor a buscar aparece en la mitad del array,
+																// devuelve true
 
 			return true;
 
@@ -113,19 +139,22 @@ public class Ej7 {
 
 		}
 
-		else if (miarray[indicemitad] != buscar && longitud == 0) {
+		else if (miarray[indicemitad] != buscar && longitud == 0) { // Si la longitud es 0, y no aparece en la mitad,
+																	// devuelve false.
 
 			return false;
 
 		}
 
-		else if (miarray[indicemitad] < buscar && longitud > 0) {
+		else if (miarray[indicemitad] < buscar && longitud > 0) { // Si el valor de la mitad es mayor, y la longitud es
+																	// mayor que 0, busca en la mitad superior.
 
 			aumento++;
 
 		}
 
-		else if (miarray[indicemitad] > buscar && longitud > 0) {
+		else if (miarray[indicemitad] > buscar && longitud > 0) {// Si el valor de la mitad es menor, y la longitud es//
+																	// mayor que 0, busca en la mitad inferior.
 
 			decremento--;
 

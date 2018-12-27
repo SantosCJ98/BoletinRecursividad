@@ -13,9 +13,13 @@ public class Ej5_recursiva {
 
 	public static void main(String[] args) {
 
+		// Pedir la cadena al usuario.
+
 		System.out.println("Introduce una cadena");
 
 		String c = readString();
+
+		// Comprobar si es palindroma.
 
 		if (palindromo(c)) {
 
@@ -30,7 +34,12 @@ public class Ej5_recursiva {
 
 	}
 
+	// Función que determina si una cadena es palíndroma.
+
 	public static boolean palindromo(String c) {
+
+		// Si una cadena es igual a su inversa (ignorando espacios y mayúsculas) es
+		// palindroma.
 
 		if (c.toLowerCase().replaceAll("[ ]", "").equals(invertircadena(c.toLowerCase().replaceAll("[ ]", "")))) {
 

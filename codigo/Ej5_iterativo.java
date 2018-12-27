@@ -11,9 +11,13 @@ public class Ej5_iterativo {
 
 	public static void main(String[] args) {
 
+		// Pedir la cadena al usuario.
+
 		System.out.println("Introduce una cadena");
 
 		String c = readString();
+
+		// Comprobar si es palindroma.
 
 		if (palindromo(c)) {
 
@@ -28,9 +32,13 @@ public class Ej5_iterativo {
 
 	}
 
+	// Función que comprueba si una cadena es palindroma.
+
 	public static boolean palindromo(String c) {
 
 		int espacios = 0;
+
+		// Contar espacios de la cadena.
 
 		for (int i = 0; i < c.length(); i++) {
 
@@ -43,6 +51,9 @@ public class Ej5_iterativo {
 		}
 
 		boolean palindromo = true;
+
+		// Si la cadena tiene espacios, convertirlos en caracter vacio. Comprobar si la
+		// cadena es igual a su inversa, ignorando mayusculas.
 
 		if (espacios == 0) {
 

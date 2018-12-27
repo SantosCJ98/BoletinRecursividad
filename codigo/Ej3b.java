@@ -12,13 +12,20 @@ public class Ej3b {
 
 	public static void main(String[] args) {
 
+		// Se pide el número al usuario.
+
 		System.out.println("Escribe un número:");
 
 		int num = readInt();
 
+		// Se muestra el primer número mayor o igual de la serie de Fibonacci a ese
+		// número junto a su posición.
+
 		System.out.println("Indice: " + posicion(num) + "\nNúmero de Fibonacci: " + mayor(num));
 
 	}
+
+	// Función que busca la posición
 
 	public static int posicion(int num) {
 
@@ -34,21 +41,23 @@ public class Ej3b {
 
 				indice = i;
 
-				encontrado = true;
+				encontrado = true; // Si encuentra el número, deja de buscar.
 
 			}
 
 			else {
 
-				i++;
+				i++; // En caso contrario, sigue buscando.
 
 			}
 
 		}
 
-		return indice;
+		return indice; // Retorna el indice.
 
 	}
+
+	// Función que busca el número.
 
 	public static int mayor(int num) {
 
@@ -64,19 +73,19 @@ public class Ej3b {
 
 				res = fibonacci(i);
 
-				encontrado = true;
+				encontrado = true; // Si lo encuentra, deja de buscar.
 
 			}
 
 			else {
 
-				i++;
+				i++; // En caso contrario, sigue buscando.
 
 			}
 
 		}
 
-		return res;
+		return res; // Devuelve el número.
 
 	}
 

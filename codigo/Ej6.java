@@ -11,15 +11,25 @@ public class Ej6 {
 
 	public static void main(String[] args) {
 
+		// Introducir longitud del array (debe ser mayor que 0)
+
 		System.out.println("Introduce la longitud del array");
 
 		int n = readEqui(0, Equivalencias.MAYOR);
 
+		// Declarar array.
+
 		int[] miarray = new int[n];
+
+		// Rellenar array con números enteros.
 
 		rellenararray(miarray);
 
+		// Mostrar array.
+
 		mostrararray(miarray);
+
+		// Comprobar si es capicua.
 
 		if (capicua(miarray, 0, miarray.length - 1)) {
 
@@ -35,6 +45,8 @@ public class Ej6 {
 
 	}
 
+	// Función para rellenar el array.
+
 	public static int[] rellenararray(int[] miarray) {
 
 		for (int i = 0; i < miarray.length; i++) {
@@ -49,6 +61,8 @@ public class Ej6 {
 
 	}
 
+	// Función para mostrar el array
+
 	public static void mostrararray(int[] miarray) {
 
 		for (int i = 0; i < miarray.length; i++) {
@@ -61,7 +75,11 @@ public class Ej6 {
 
 	}
 
+	// Función recursiva que determina si un array es capicua o no.
+
 	public static boolean capicua(int[] miarray, int principio, int ultimo) {
+
+		// Si la longitud del array es igual a 1, el array es capicua.
 
 		if (miarray.length == 1) {
 
@@ -69,11 +87,16 @@ public class Ej6 {
 
 		}
 
+		// Si la posición inicial es mayor o igual a la final, es capicua.
+
 		if (principio >= ultimo) {
 
 			return true;
 
 		}
+
+		// Si el array no se lee igual de izquierda a derecha que de derecha a
+		// izquierda, no es capicua
 
 		if (miarray[principio] != miarray[ultimo]) {
 

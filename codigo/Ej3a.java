@@ -11,15 +11,19 @@ public class Ej3a {
 
 	public static void main(String[] args) {
 
+		// Pedir el limite al usuario (debe ser mayor o igual a 0)
+
 		System.out.println("¿Hasta que elemento de la serie de Fibonnaci quiere llegar?");
 
-		int n = readInt();
+		int n = readEqui(0, Equivalencias.MAYORIGUAL);
 
-		int limite = fibonacci(n);
+		// Mostrar serie.
 
-		serie(limite);
+		serie(fibonacci(n));
 
 	}
+	
+	//Función que escribe la serie.
 
 	public static void serie(int limite) {
 
@@ -27,11 +31,15 @@ public class Ej3a {
 
 		int b = 1;
 
+		// Si el limite es cero, se muestra 0.
+
 		if (limite == 0) {
 
 			System.out.print(a);
 
 		}
+
+		// Si el limite es 1, se muestra 0 y 1.
 
 		else if (limite == 1) {
 
@@ -39,11 +47,13 @@ public class Ej3a {
 
 		}
 
+		// En caso contrario, se muestra la serie, hasta llegar a ese número.
+
 		else {
 
-			System.out.print(0 + "   " + 1 + "   ");
+			System.out.print(0 + "   " + 1 + "   "); // Se muestra 0 y 1 al principio.
 
-			while (b + a <= limite) {
+			while (b + a <= limite) { // Hasta que se llegue al límite...
 
 				int aux = a;
 
@@ -51,7 +61,7 @@ public class Ej3a {
 
 				b = aux + a;
 
-				System.out.print(b + "   ");
+				System.out.print(b + "   "); // Mostrar serie.
 
 			}
 

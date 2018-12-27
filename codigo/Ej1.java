@@ -11,19 +11,34 @@ public class Ej1 {
 
 	public static void main(String[] args) {
 
+		// Le pedimos al usuario la base.
+
 		System.out.println("Introduce la base:");
+
+		// El usuario introduce la introduce (debe ser un numero entero)
 
 		int base = readInt();
 
+		// El usuario introduce el exponente
+
 		System.out.println("Introduce el exponente:");
 
+		// El usuario lo introduce (debe ser un numero entero mayor o igual a 0)
+
 		int exponente = readEqui(0, Equivalencias.MAYORIGUAL);
+
+		// Mostramos el resultado
 
 		System.out.println("El resultado es: " + potencia(base, exponente));
 
 	}
 
+	// Función recursiva para hacer la potencia de un número a través de su base y
+	// exponente.
+
 	public static int potencia(int base, int exponente) {
+
+		// Si el exponente es 1, la funcion devuelve la base.
 
 		if (exponente == 1) {
 
@@ -31,11 +46,16 @@ public class Ej1 {
 
 		}
 
+		// Si el exponente es 0, la funcion devuelve 1.
+
 		else if (exponente == 0) {
 
 			return 1;
 
 		}
+
+		// En caso contrario, lo que funcion ira haciendo sera multiplicar la base
+		// por si misma tantas veces como indique el exponente
 
 		else {
 
